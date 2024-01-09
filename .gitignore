@@ -25,7 +25,7 @@ crash.*.log
 # remote_backend - which is
 # used only during bootstrap
 ############################
-remote_backend.tf
+# remote_backend.tf
 
 # CLI configuration files  #
 ############################
@@ -39,4 +39,4 @@ terraform.rc
 # GitHub Actions - do not  
 # propagate until the end
 ############################
-terraform.yml
+# terraform.yml
