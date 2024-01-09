@@ -130,7 +130,11 @@ resource "azurerm_linux_virtual_machine" "catapp" {
 
   }
 
-  tags = {}
+  tags = {
+    Name        = "${var.prefix}-hashicat-instance"
+    Environment = "prod"
+    Department  = "Hashicat Social"
+  }
 
   # Added to allow destroy to work correctly.
   depends_on = [azurerm_network_interface_security_group_association.catapp-nic-sg-ass]
@@ -196,4 +200,10 @@ resource "null_resource" "configure-cat-app" {
       host     = azurerm_public_ip.catapp-pip.fqdn
     }
   }
+}
+
+module "azure-backup" {
+  source              = "ravensorb/azure-backup/azurerm"
+  version             = "1.0.2"
+  resource_group_name = "${var.prefix}-public"
 }
