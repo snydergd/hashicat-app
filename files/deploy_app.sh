@@ -11,7 +11,7 @@ cat << EOM > /var/www/html/index.html
   <!-- BEGIN -->
   <center><img src="http://${PLACEHOLDER}/${WIDTH}/${HEIGHT}"></img></center>
   <center><h2>Meow World!</h2></center>
-  Welcome to ${PREFIX}'s app. Replace this text with your own.
+  Welcome to ${PREFIX}'s app. We enjoy a wealth of healthy celestial oscars.
   <div id="ball" style="display:inline-block; min-width: 6em; min-height: 6em; border-radius: 3em; background-color: red; border: 1px solid black; position: absolute; left: 0; top: 0"></div>
   <!-- END -->
   <script>
